@@ -1,0 +1,23 @@
+{
+  "extends": "@electron-toolkit/tsconfig/tsconfig.web.json",
+  "include": [
+    "src/app/src/env.d.ts",
+    "src/app/src/**/*",
+    "src/app/src/**/*.tsx",
+    "src/electron/preload/*.d.ts"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "@renderer/*": [
+        "./src/app/src/*"
+      ]
+    },
+"moduleResolution": "Bundler",
+    "module": "ESNext",
+    "target": "ES2022",
+    "skipLibCheck": true,
+    "strictNullChecks": true
+  }
+}
